@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>UVU Quiz</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    text-align: center;
+}
+
+.quizbox{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+h1{
+    color: #275D38;
+}
+
+button{
+    background-color: #275D38;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #3f8f5a;
+}
+
+</style>
+
+<script>
+
+let score = 0;
+let question = 0;
+
+const questions = [
+{
+q: "What does UVU stand for?",
+a: ["Utah Valley University","United Valley University","Utah Valley Union","University of Valley Utah"],
+correct: 0
+},
+
+{
+q: "Where is UVU located?",
+a: ["Salt Lake City","Orem","Provo","Logan"],
+correct: 1
+},
+
+{
+q: "What is UVU's mascot?",
+a: ["Wolverines","Wildcats","Cougars","Eagles"],
+correct: 0
+},
+
+{
+q: "What color is associated with UVU?",
+a: ["Blue","Green","Red","Purple"],
+correct: 1
+},
+
+{
+q: "What conference does UVU compete in?",
+a: ["Big 10","SEC","WAC","Pac-12"],
+correct: 2
+}
+];
+
+function showQuestion(){
+
+if(question >= questions.length){
+document.getElementById("quiz").innerHTML =
+"<h2>Your score: " + score + "/5</h2><p>Great job Wolverine! 🐺</p>";
+return;
+}
+
+let q = questions[question];
+
+let html = "<h3>" + q.q + "</h3>";
+
+for(let i=0;i<q.a.length;i++){
+html += "<button onclick='checkAnswer("+i+")'>" + q.a[i] + "</button><br>";
+}
+
+document.getElementById("quiz").innerHTML = html;
+}
+
+function checkAnswer(choice){
+
+if(choice === questions[question].correct){
+score++;
+}
+
+question++;
+showQuestion();
+
+}
+
+</script>
+
+</head>
+
+<body onload="showQuestion()">
+
+<h1>UVU Quiz Game 🐺</h1>
+
+<div class="quizbox">
+<div id="quiz"></div>
+</div>
+
+</body>
+</html>
