@@ -1,11 +1,13 @@
 .header{
-    background-color: lavender;
+    background-color: rgba(215, 150, 255, 0.491);
     color: violet;
     font-size: 25px;
     height: 200px;
     line-height: 200px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+
 }
 .mainbody{
     background-color: rgba(250, 192, 255, 0.491);
@@ -16,16 +18,19 @@
 }
  img{
     display: block;
-    border: 300px violet;
  }
 
 .footer{
     text-align: center;
     font-weight: bold;
-    background-color: lavender;
+    background-color: rgba(215, 150, 255, 0.491);
     color:violet;
-    height: 70px;
-    line-height: 70px;
+    height: 100px;
+    line-height: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
    
+}
+.mainbody h2{
+    text-decoration: underline;
+    font-style: italic;
 }
