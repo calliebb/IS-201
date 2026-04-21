@@ -1,0 +1,31 @@
+.header{
+    background-color: lavender;
+    color: violet;
+    font-size: 25px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainbody{
+    background-color: rgba(250, 192, 255, 0.491);
+    font-size: 20px;
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+ img{
+    display: block;
+    border: 300px violet;
+ }
+
+.footer{
+    text-align: center;
+    font-weight: bold;
+    background-color: lavender;
+    color:violet;
+    height: 70px;
+    line-height: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
